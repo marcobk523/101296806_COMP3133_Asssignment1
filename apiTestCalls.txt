@@ -1,0 +1,62 @@
+mutation Signup {
+  signup(username: "1", email: "1@1.com", password: "123") {
+    _id
+    username
+    email
+  }
+}
+
+query Login {
+  login(username: "1", password: "123") {
+    username
+    password
+  }
+}
+
+query GetAllEmployees {
+  getAllEmployees {
+    _id
+    first_name
+    last_name
+    email
+    gender
+    salary
+  }
+}
+
+mutation AddNewEmployee {
+  addNewEmployee(first_name: "2", last_name: "2", email: "2@2.com", gender: "Male", salary: 9999) {
+    _id
+    first_name
+    last_name
+    email
+    gender
+    salary
+  }
+}
+
+query SearchEmployeeByEid {
+  searchEmployeeByEid(eid: "65d22954ea181479ddd1eada") {
+    _id
+    first_name
+    last_name
+    email
+    gender
+    salary
+  }
+}
+
+mutation UpdateEmployeeByEid {
+  updateEmployeeByEid(eid: "65d22954ea181479ddd1eada", first_name: "one", last_name: "1", email: "1@1.com", gender: "Female", salary: 155000) {
+    _id
+    first_name
+    last_name
+    email
+    gender
+    salary
+  }
+}
+
+mutation DeleteEmployeeByEid {
+  deleteEmployeeByEid(eid: "65d22954ea181479ddd1eada")
+}
